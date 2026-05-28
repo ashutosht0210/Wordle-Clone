@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section class="welcome">
+        <img src="https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/wordle-icon.svg" class="logo">
+        <h1>Wordle</h1>
+        <p>Get 6 chances to guess a 5-letter word.</p>
+        <button class="play">Play</button>
+    </section>
+    <section class="main">
+        <header>
+            <!-- <h1>WORDLE</h1> -->
+            <div class="menu-left"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-right">
+                <i class="fa-regular fa-circle-question help"></i>
+                <i class="fa-solid fa-gear setting"></i>
+            </div>
+        </header>
+        <div class="game-box">
+            <div class="status-msg-invalid">Not in word list</div>
+            <div class="guess-1 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+            <div class="guess-2 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+            <div class="guess-3 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+            <div class="guess-4 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+            <div class="guess-5 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+            <div class="guess-6 guess">
+                <div id="box-1" class="box"></div>
+                <div id="box-2" class="box"></div>
+                <div id="box-3" class="box"></div>
+                <div id="box-4" class="box"></div>
+                <div id="box-5" class="box"></div>
+            </div>
+        </div>
+        
+        <div class="keyboard">
+            <div class="row1 row">
+                <div id="Q" class="key">Q</div>
+                <div id="W" class="key">W</div>
+                <div id="E" class="key">E</div>
+                <div id="R" class="key">R</div>
+                <div id="T" class="key">T</div>
+                <div id="Y" class="key">Y</div>
+                <div id="U" class="key">U</div>
+                <div id="I" class="key">I</div>
+                <div id="O" class="key">O</div>
+                <div id="P" class="key">P</div>
+            </div>
+            <div class="row2 row">
+                <div id="A" class="key">A</div>
+                <div id="S" class="key">S</div>
+                <div id="D" class="key">D</div>
+                <div id="F" class="key">F</div>
+                <div id="G" class="key">G</div>
+                <div id="H" class="key">H</div>
+                <div id="J" class="key">J</div>
+                <div id="K" class="key">K</div>
+                <div id="L" class="key">L</div>
+            </div>
+            <div class="row3 row">
+                <div id="ENTER" class="key">ENTER</div>
+                <div id="Z" class="key">Z</div>
+                <div id="X" class="key">X</div>
+                <div id="C" class="key">C</div>
+                <div id="V" class="key">V</div>
+                <div id="B" class="key">B</div>
+                <div id="N" class="key">N</div>
+                <div id="M" class="key">M</div>
+                <div id="BACKSPACE" class="key"><i class="fa-solid fa-delete-left"></i></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="Resources/answer.js"></script>
+    <script src="Resources/guess.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
