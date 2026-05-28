@@ -6,7 +6,7 @@ A browser-based Wordle clone built with vanilla HTML, CSS, and JavaScript — no
 
 ## 🔗 Live Demo
 
-👉 [Play it here]()
+👉 [Play it here](https://ashutosht0210.github.io/Wordle-Clone/)
 
 ---
 
