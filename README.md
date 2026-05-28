@@ -14,6 +14,7 @@ A browser-based Wordle clone built with vanilla HTML, CSS, and JavaScript — no
 
 ```
 wordle/
+├── README.md           # Readme File
 ├── index.html          # Main HTML file (welcome screen + game UI)
 ├── style.css           # All styling (dark theme, animations, keyboard)
 ├── app.js              # Core game logic
