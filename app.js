@@ -8,6 +8,8 @@ playBtn.addEventListener("click",()=> {
     main.style.display = "block";
 });
 
+
+
 // Random Word Choose
 let ans = answer[Math.floor(Math.random() * answer.length)];
 
@@ -96,6 +98,9 @@ document.addEventListener('keydown', (e) => {
                 if(Math.min(...result)==2) {
                     numOfGuess = 7;
                     statMsg.innerText = "Genius! You guessed it.";
+                    if(main.classList.contains("light")) {
+                        statMsg.style.color = "#121213";
+                    }
                     statMsg.style.backgroundColor = "#06d15b";
                     statMsg.style.display = "block";
                     
@@ -143,3 +148,29 @@ for (let key of keys) {
         );
     });
 }
+
+
+// Mode - light/dark
+
+let mode = document.querySelector("#mode");
+mode.addEventListener("click",()=> {
+    main.classList.toggle("light");
+
+    if(main.classList.contains("light")){
+        mode.setAttribute("class","fa-regular fa-sun");
+        statMsg.style.backgroundColor = "#121213" ;
+        statMsg.style.color = "white" ;
+        for (let key of keys) {
+            key.style.backgroundColor = "white";
+            key.style.color = "black";
+            key.style.border = "2px solid #121213";
+        }
+    } 
+    else {
+        mode.setAttribute("class","fa-solid fa-moon");
+        for (let key of keys) {
+            key.style.backgroundColor = "gray";
+            key.style.color = "white";
+        }
+    } 
+});

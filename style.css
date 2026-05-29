@@ -51,9 +51,10 @@ button:hover {
 }
 
 .main {
-    display: none;
+    /* display: none; */
     height: 100vh;
     background-color: #121213;
+    color: white;
 }
 
 /* Nav Bar */
@@ -61,7 +62,6 @@ header {
 
     height: 50px;
     border-bottom: 1px solid rgb(78, 76, 76);
-    color: white;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -71,7 +71,7 @@ header {
 }
 .menu-right {
     font-size: 1.6rem;
-    width: 80px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
 }
@@ -101,9 +101,7 @@ header {
     aspect-ratio: 1/1;
     border: 1px solid #3a3a3c;
     margin: 0 3px 0 3px;
-    /* border-radius: 5px; */
     box-shadow: 0 0 1px white;
-    color: white;
     padding-top: 2px;
     font-size: 2.2rem;
     font-weight: 600;
@@ -185,7 +183,6 @@ header {
     font-size: 1.3rem;
     font-weight: 400;
     padding: 15px;
-    
 }
 
 #ENTER, #BACK{
@@ -212,6 +209,7 @@ header {
 /* Status Message */
 .status-msg-invalid {
     background-color: white;
+    color: black;
     width: auto;
     height: auto;
     font-size: 1rem;
@@ -223,4 +221,12 @@ header {
     top: 70px;
     display: none;
     z-index: 1000;
+    
+}
+
+/* Mode */
+
+.light {
+    color: #121213;
+    background-color: whitesmoke;
 }
