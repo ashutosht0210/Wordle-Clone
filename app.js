@@ -167,6 +167,8 @@ mode.addEventListener("click",()=> {
         }
     } 
     else {
+        statMsg.style.backgroundColor = "white" ;
+        statMsg.style.color = "black" ;
         mode.setAttribute("class","fa-solid fa-moon");
         for (let key of keys) {
             key.style.backgroundColor = "gray";
