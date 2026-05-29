@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .welcome img {
@@ -50,7 +51,7 @@ button:hover {
 }
 
 .main {
-    display: none;
+    /* display: none; */
     height: 100vh;
     background-color: #121213;
 }
@@ -184,12 +185,27 @@ header {
     font-size: 1.3rem;
     font-weight: 400;
     padding: 15px;
+    
 }
 
 #ENTER, #BACK{
     width: 80px;
     font-size: 0.9rem;
     padding: 19px;
+}
+
+.key:hover {
+    transform: scale(1.1);
+}
+
+.press {
+    animation: keyPress 0.3s;
+}
+
+@keyframes keyPress {
+    0% {transform : scale(1);}
+    50% {transform : scale(0.9);}
+    100% {transform : scale(1);}
 }
 
 

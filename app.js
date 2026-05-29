@@ -22,6 +22,11 @@ let statMsg = document.querySelector(".status-msg-invalid");
 document.addEventListener('keydown', (e) => {
     if(numOfGuess<6){
         const key = e.key.toUpperCase();
+        let btn = document.querySelector("#"+key);
+        btn.classList.add("press");
+        setTimeout(()=>{
+            btn.classList.remove("press");
+        },300);
         if (key === 'BACKSPACE' && cnt > numOfGuess * 5 ) {
             box[--cnt].innerText = "";
             box[cnt].classList.remove("filled");
