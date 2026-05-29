@@ -81,6 +81,7 @@ Handles all game logic:
 ## ✨ Features
 
 - ⌨️ Physical keyboard + on-screen keyboard support
+- 🔄 Animated Key Press effect in on-screen keyboard
 - 🔄 Animated tile flip on guess submission
 - 📳 Shake animation for invalid words
 - 🎨 Dark theme matching the NYT Wordle aesthetic
