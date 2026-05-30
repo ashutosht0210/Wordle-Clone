@@ -8,8 +8,6 @@ playBtn.addEventListener("click",()=> {
     main.style.display = "block";
 });
 
-
-
 // Random Word Choose
 let ans = answer[Math.floor(Math.random() * answer.length)];
 
