@@ -19,6 +19,12 @@ let guess = "";
 
 let statMsg = document.querySelector(".status-msg-invalid");
 
+let popupMsg = document.querySelector(".message");
+
+let word = document.querySelectorAll(".word");
+word[0].innerText = ans.toUpperCase();
+word[1].innerText = ans.toUpperCase();
+
 document.addEventListener('keydown', (e) => {
     if(numOfGuess<6){
         const key = e.key.toUpperCase();
@@ -90,12 +96,11 @@ document.addEventListener('keydown', (e) => {
                             keyboardKey.classList.add("correct-place");
                             break;
                     }
-                }, i * 300);
+                }, i * 600);
             }
 
                 if(Math.min(...result)==2) {
-                    numOfGuess = 7;
-                    statMsg.innerText = "Genius! You guessed it.";
+                    statMsg.innerText = "Genius!";
                     if(main.classList.contains("light")) {
                         statMsg.style.color = "#121213";
                     }
@@ -104,7 +109,19 @@ document.addEventListener('keydown', (e) => {
                     
                     setTimeout(()=> {
                         statMsg.style.display = "none";
-                    },5000);
+                    },1000);
+                    let guess = document.querySelector("#guess");
+                    guess.innerText = numOfGuess +1;
+                    setTimeout(() => {
+                        popupMsg.style.display = "flex";
+                        let win = document.querySelector(".pop-up-win");
+                        win.style.display = "flex";
+                        
+                        
+                    },3000);
+
+                    numOfGuess = 7;
+
                 }
 
                 numOfGuess++;
@@ -112,6 +129,14 @@ document.addEventListener('keydown', (e) => {
                 if(numOfGuess==6) {
                     statMsg.innerText = ans.toUpperCase();
                     statMsg.style.display = "block";
+                    setTimeout(()=> {
+                        statMsg.style.display = "none";
+                    },1000);
+                    setTimeout(() => {
+                        popupMsg.style.display = "flex";
+                        let lose = document.querySelector(".pop-up-lose");
+                        lose.style.display = "flex";
+                    },3000);
                 }
             }
             
@@ -174,3 +199,21 @@ mode.addEventListener("click",()=> {
         }
     } 
 });
+
+// Win/Lose Pop-Up
+
+let closeBtn = document.querySelectorAll(".close-btn");
+
+
+let restart = document.querySelectorAll(".restart");
+
+
+for(let i=0;i<2;i++) {
+    closeBtn[i].addEventListener("click", ()=> {
+        popupMsg.style.display = "none";
+    });
+
+    restart[i].addEventListener("click",()=>{
+        location.reload();
+    });
+}

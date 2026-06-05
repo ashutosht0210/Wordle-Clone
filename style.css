@@ -130,7 +130,7 @@ header {
 .not-present {
     border: 1px solid #3a3a3c;
     background-color: #3a3a3c !important;
-    animation: rotate 0.3s;
+    animation: rotate 0.6s;
 }
 
 .invalid {
@@ -230,3 +230,92 @@ header {
     color: #121213;
     background-color: whitesmoke;
 }
+
+/* Win/Lose Message */
+
+.message {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up-win {
+    height: auto;
+    width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    border: 2px solid #121213;
+}
+
+.pop-up-lose {
+    height: auto;
+    width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    border: 2px solid #121213;
+
+}
+
+.close-btn  {
+    position: relative;
+    left: 160px;
+    top: 20px;
+    background : none;
+    border: none;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.close-btn:hover {
+    transform: scale(1.3);
+    margin: 10px;
+}
+
+.headline {
+    font-size: 3.3rem;
+    margin: 10px;
+    color: #538d4e ;
+}
+
+.sub {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.word {
+    font-size: 1.8rem;
+    margin: 10px;
+    color: #538d4e ;
+
+}
+
+.meta {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.restart {
+    height: 48px;
+    width: 180px;
+    font-size: 18px;
+    background-color: #3d7a42;
+    color: #fff;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
