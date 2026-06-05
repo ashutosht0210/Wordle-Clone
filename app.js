@@ -82,16 +82,19 @@ document.addEventListener('keydown', (e) => {
                     switch (currentResult) {
                         case 0:
                             currentBox.classList.add("not-present");
+                            currentBox.classList.add("rotate");
                             keyboardKey = document.querySelector("#" + letter);
                             keyboardKey.classList.add("not-present");
                             break;
                         case 1:
                             currentBox.classList.add("wrong-place");
+                            currentBox.classList.add("rotate");
                             keyboardKey = document.querySelector("#" + letter);
                             keyboardKey.classList.add("wrong-place");
                             break;
                         case 2:
                             currentBox.classList.add("correct-place");
+                            currentBox.classList.add("rotate");
                             keyboardKey = document.querySelector("#" + letter);
                             keyboardKey.classList.add("correct-place");
                             break;
