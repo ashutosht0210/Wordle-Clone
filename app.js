@@ -179,8 +179,15 @@ for (let key of keys) {
 // Mode - light/dark
 
 let mode = document.querySelector("#mode");
+
+let popupWin = document.querySelector(".pop-up-win");
+let popupLose = document.querySelector(".pop-up-lose");
+let closeBtn = document.querySelectorAll(".close-btn");
+let restart = document.querySelectorAll(".restart");
+
 mode.addEventListener("click",()=> {
     main.classList.toggle("light");
+    popupWin.classList.toggle("popup-light");
 
     if(main.classList.contains("light")){
         mode.setAttribute("class","fa-regular fa-sun");
@@ -191,6 +198,8 @@ mode.addEventListener("click",()=> {
             key.style.color = "black";
             key.style.border = "2px solid #121213";
         }
+        for(let i=0;i<2;i++)
+            closeBtn[i].style.color = "white";
     } 
     else {
         statMsg.style.backgroundColor = "white" ;
@@ -200,16 +209,12 @@ mode.addEventListener("click",()=> {
             key.style.backgroundColor = "gray";
             key.style.color = "white";
         }
+        for(let i=0;i<2;i++)
+            closeBtn[i].style.color = "#121212";
     } 
 });
 
 // Win/Lose Pop-Up
-
-let closeBtn = document.querySelectorAll(".close-btn");
-
-
-let restart = document.querySelectorAll(".restart");
-
 
 for(let i=0;i<2;i++) {
     closeBtn[i].addEventListener("click", ()=> {
